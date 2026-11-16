@@ -195,7 +195,7 @@ resource "aws_instance" "monitored_node" {
               #!/bin/bash
               apt-get update -y
               apt-get install -y python3-pip git
-              git clone https://github.com/cloudpulse/platform.git /opt/cloudpulse
+              git clone https://github.com/thejus07/CLOUDPULSE.git /opt/cloudpulse
               cd /opt/cloudpulse
               pip install -r backend/requirements.txt
               python3 agent/main.py --daemon &

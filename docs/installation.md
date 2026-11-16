@@ -15,7 +15,7 @@ This guide covers local development, Docker Compose orchestration, and AWS EC2 d
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/cloudpulse/platform.git
+git clone https://github.com/thejus07/CLOUDPULSE.git
 cd CLOUDPULSE
 
 # 2. Run automated setup script

@@ -55,7 +55,7 @@ export const ServersPage: React.FC<ServersPageProps> = ({ servers, onRefresh, on
   };
 
   const agentInstallSnippet = `# CloudPulse Monitoring Agent Installation
-git clone https://github.com/cloudpulse/agent.git /opt/cloudpulse
+git clone https://github.com/thejus07/CLOUDPULSE.git /opt/cloudpulse
 cd /opt/cloudpulse
 pip install -r backend/requirements.txt
 python agent/main.py --daemon --server-id srv-production-01 --backend-url http://10.0.1.100:5000/api`;

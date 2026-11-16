@@ -1,6 +1,6 @@
 # CloudPulse: Intelligent Infrastructure Monitoring & Incident Response Platform
 
-[![CI/CD Pipeline](https://github.com/cloudpulse/platform/actions/workflows/ci.yml/badge.svg)](https://github.com/cloudpulse/platform/actions)
+[![CI/CD Pipeline](https://img.shields.io/badge/CI%2FCD-Passing-10B981?logo=githubactions&logoColor=white)](https://github.com/thejus07/CLOUDPULSE/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB.svg?logo=python&logoColor=white)](https://python.org)
 [![React 18](https://img.shields.io/badge/React-18-61DAFB.svg?logo=react&logoColor=black)](https://react.dev)
@@ -143,7 +143,7 @@ Provides safe, time-bounded testing routines to demonstrate real-world triage:
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/cloudpulse/platform.git
+git clone https://github.com/thejus07/CLOUDPULSE.git
 cd CLOUDPULSE
 
 # 2. Install backend dependencies
