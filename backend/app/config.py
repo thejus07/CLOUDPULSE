@@ -54,7 +54,7 @@ class Config:
     ALLOWED_TEMP_PATHS = [
         p.strip() for p in os.getenv(
             "REMEDIATION_ALLOWED_TEMP_PATHS",
-            f"{BASE_DIR / 'data' / 'test_temp'},/tmp/cloudpulse_test,/tmp/cloudpulse_cache"
+            f"/tmp,{BASE_DIR / 'data' / 'test_temp'},/tmp/cloudpulse_test,/tmp/cloudpulse_cache"
         ).split(",") if p.strip()
     ]
 

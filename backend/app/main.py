@@ -4,6 +4,17 @@ Initializes Flask app, registers API blueprints, enables CORS, and manages datab
 """
 
 import os
+import sys
+from pathlib import Path
+
+# Ensure project root and backend directory are always resolvable
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BACKEND_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+if str(BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKEND_DIR))
+
 from flask import Flask, jsonify
 from flask_cors import CORS
 from backend.app.config import config
