@@ -5,6 +5,7 @@
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB.svg?logo=python&logoColor=white)](https://python.org)
 [![React 18](https://img.shields.io/badge/React-18-61DAFB.svg?logo=react&logoColor=black)](https://react.dev)
 [![AWS](https://img.shields.io/badge/AWS-EC2%20%7C%20CloudWatch%20%7C%20SNS-FF9900.svg?logo=amazon-aws&logoColor=white)](https://aws.amazon.com)
+[![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000.svg?logo=vercel&logoColor=white)](https://vercel.com)
 
 > Built for enterprise production observability and designed to showcase practical **Linux Administration**, **Python Backend Engineering**, **AWS Cloud Architecture**, **Systems Troubleshooting**, and **Automated Incident Remediation** for an **Amazon Support Engineer Intern** portfolio.
 
@@ -172,6 +173,13 @@ npm run dev
 docker compose up -d
 docker compose ps
 ```
+
+### Option 3: Vercel Full-Stack Serverless Deployment
+
+CloudPulse includes native configuration for one-click deployment on [Vercel](https://vercel.com):
+- Import `https://github.com/thejus07/CLOUDPULSE` into your Vercel Dashboard.
+- Vercel automatically detects `vercel.json`, root `requirements.txt`, and builds the React frontend with the serverless Python API.
+- Live URL will be instantly available.
 
 ---
 

@@ -22,7 +22,10 @@ class Config:
     HOST = os.getenv("HOST", "0.0.0.0")
 
     # Database
-    DEFAULT_SQLITE_PATH = BASE_DIR / "data" / "cloudpulse.db"
+    if os.getenv("VERCEL"):
+        DEFAULT_SQLITE_PATH = Path("/tmp/cloudpulse.db")
+    else:
+        DEFAULT_SQLITE_PATH = BASE_DIR / "data" / "cloudpulse.db"
     DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{DEFAULT_SQLITE_PATH.as_posix()}")
 
     # Monitoring Thresholds (percentages)

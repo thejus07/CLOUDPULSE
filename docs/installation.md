@@ -61,7 +61,35 @@ docker compose down
 
 ---
 
-## 3. AWS Infrastructure Deployment (Terraform)
+## 3. Vercel Serverless Deployment (Frontend & API)
+
+CloudPulse is configured for native deployment on **Vercel** with full-stack serverless routing:
+- **Frontend**: Built via `@vercel/static-build` using Vite & React.
+- **Backend API**: Executed as a Python Serverless Function (`api/index.py` wrapping the Flask REST app).
+- **Database**: Automatically detects the Vercel execution environment and points SQLite to `/tmp/cloudpulse.db` (or uses external PostgreSQL like Neon/Supabase if `DATABASE_URL` is configured in Vercel Environment Variables).
+
+### Steps to Deploy to Vercel:
+
+1. **Push your code to GitHub**:
+   ```bash
+   git push -u origin main
+   ```
+2. **Import into Vercel**:
+   - Go to [vercel.com/new](https://vercel.com/new).
+   - Select your repository: **`thejus07/CLOUDPULSE`**.
+   - Vercel automatically detects `vercel.json`, root `requirements.txt`, and `frontend/package.json`.
+3. **Optional Environment Variables**:
+   In the Vercel Project Settings $\rightarrow$ Environment Variables:
+   - `SECRET_KEY`: `(your-secret-key)`
+   - `REMEDIATION_ENABLED`: `true`
+   - `REMEDIATION_REQUIRE_APPROVAL`: `false`
+   - `DATABASE_URL` *(Optional)*: `postgresql://user:password@neon.tech/cloudpulse` if using external Postgres.
+4. **Click Deploy**:
+   Vercel will build both the React dashboard and the serverless Python API. Your live URL will look like `https://cloudpulse-xyz.vercel.app`.
+
+---
+
+## 4. AWS Infrastructure Deployment (Terraform)
 
 CloudPulse includes Terraform definitions to provision a dedicated VPC, Security Group, IAM Role, SNS Alert Topic, and an EC2 instance with CloudPulse pre-installed:
 
